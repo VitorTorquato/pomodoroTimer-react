@@ -1,5 +1,5 @@
 import { Play } from "@phosphor-icons/react"
-import { HomerContainer ,FormContainer , CountdownContainer, Separator} from "./styles"
+import { HomeContainer ,FormContainer , CountdownContainer, Separator, StartCountdownBtn, TaskInput, MinutesAmount} from "./styles"
 
 
 export function Home(){
@@ -7,14 +7,18 @@ export function Home(){
 
 
     return(
-        <HomerContainer>
+        <HomeContainer>
             <form action="">
                     <FormContainer>
                         <label htmlFor="task">Vou trabalhar em</label>    
-                        <input id="task" />
+                        <TaskInput 
+                        placeholder="Qual o nome do seu projeto" 
+                        id="task" />
 
-                        <label htmlFor="minutesAmount">Duante</label>
-                        <input type="number"  id="minutesAmount"/>
+                        <label htmlFor="minutesAmount">Durante</label>
+                        <MinutesAmount
+                        type="number"
+                        id="minutesAmount"/>
 
                         <span>minutos.</span>
                     </FormContainer>                
@@ -29,11 +33,12 @@ export function Home(){
                     </CountdownContainer>
 
 
-                    <button
+                    <StartCountdownBtn
+                    disabled
                         type="submit"
                     >
-                        <Play/>
-                    </button>
+                        <Play/>Start
+                    </StartCountdownBtn>
 
 
 
@@ -41,7 +46,7 @@ export function Home(){
 
             </form>
 
-        </HomerContainer>
+        </HomeContainer>
 
     )
 
