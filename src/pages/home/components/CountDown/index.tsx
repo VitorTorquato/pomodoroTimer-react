@@ -3,7 +3,7 @@ import {CountdownContainer,Separator} from './styles'
 import { useContext, useEffect} from "react";
 
 import { differenceInSeconds } from 'date-fns'
-import { CyclesContext } from '../..';
+import { CyclesContext } from '../../../../contexts/Cyclescontext';
 
 /**
  * props Drillings => Quando a gente tem muitas propriedades apenas para a comunicacao entre componentes
